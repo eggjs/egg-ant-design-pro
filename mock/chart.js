@@ -4,7 +4,7 @@ import moment from 'moment';
 const visitData = [];
 const beginDay = new Date().getTime();
 
-const fakeY = [7, 5, 4, 2, 4, 7, 5, 6, 5, 9, 6, 3, 1, 5, 3, 6, 5];
+const fakeY = [ 7, 5, 4, 2, 4, 7, 5, 6, 5, 9, 6, 3, 1, 5, 3, 6, 5 ];
 for (let i = 0; i < fakeY.length; i += 1) {
   visitData.push({
     x: moment(new Date(beginDay + (1000 * 60 * 60 * 24 * i))).format('YYYY-MM-DD'),
@@ -13,7 +13,7 @@ for (let i = 0; i < fakeY.length; i += 1) {
 }
 
 const visitData2 = [];
-const fakeY2 = [1, 6, 4, 8, 3, 7, 2];
+const fakeY2 = [ 1, 6, 4, 8, 3, 7, 2 ];
 for (let i = 0; i < fakeY2.length; i += 1) {
   visitData2.push({
     x: moment(new Date(beginDay + (1000 * 60 * 60 * 24 * i))).format('YYYY-MM-DD'),
@@ -167,8 +167,8 @@ const radarTitleMap = {
   contribute: '贡献',
   hot: '热度',
 };
-radarOriginData.forEach((item) => {
-  Object.keys(item).forEach((key) => {
+radarOriginData.forEach(item => {
+  Object.keys(item).forEach(key => {
     if (key !== 'name') {
       radarData.push({
         name: item.name,
