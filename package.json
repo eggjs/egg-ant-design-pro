@@ -13,6 +13,9 @@
     "classnames": "^2.2.5",
     "dva": "^2.1.0",
     "dva-loading": "^1.0.4",
+    "egg": "^2.2.1",
+    "egg-scripts": "^2.5.0",
+    "egg-view-assets": "^1.0.0-alpha.2",
     "enquire-js": "^0.1.1",
     "fastclick": "^1.0.6",
     "lodash": "^4.17.4",
@@ -29,10 +32,8 @@
     "react-document-title": "^2.0.3",
     "react-dom": "^16.2.0",
     "react-fittext": "^1.0.0",
-    "url-polyfill": "^1.0.10",
     "rollbar": "^2.3.4",
-    "egg": "^2.2.1",
-    "egg-scripts": "^2.5.0"
+    "url-polyfill": "^1.0.10"
   },
   "devDependencies": {
     "autod": "^3.0.1",
