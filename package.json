@@ -1,7 +1,7 @@
 {
   "name": "egg-ant-design-pro",
   "version": "1.0.0",
-  "description": "",
+  "description": "Egg Example for Ant Design Pro",
   "private": true,
   "dependencies": {
     "@antv/data-set": "^0.8.0",
@@ -62,7 +62,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-ant-design-pro",
+    "start": "egg-scripts start --daemon --title=egg-server-ant-design-pro --env prod",
     "stop": "egg-scripts stop --title=egg-server-ant-design-pro",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
@@ -75,12 +75,13 @@
     "autod": "autod"
   },
   "ci": {
-    "version": "8"
+    "version": "8",
+    "license": true
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:eggjs/egg-ant-design-pro.git"
   },
-  "author": "",
+  "author": "popomore",
   "license": "MIT"
 }
