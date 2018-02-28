@@ -1,33 +1,36 @@
-# ant-design-pro
+# Egg Example for Ant Design Pro
 
+A full example with frontend([Ant Design Pro]) and backend([Egg.js]).
 
+## Development
 
-## QuickStart
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
+Egg has integrated with assets tools by [egg-view-assets], so you don't have to start another command for serving assets.
 
 ```bash
-$ npm i
 $ npm run dev
-$ open http://localhost:7001/
 ```
 
-### Deploy
+`npm run dev` will start a dev server for assets that configured in `config.assets.devServer`.
+
+## Deployment
+
+Assets should be compiled before shipping.
+
+```bash
+$ npm run build
+```
+
+It will be generated to `app/public` that hosted by Egg, due to the configration of ``.webpackrc`.
+
+Start Egg with prod environment.
 
 ```bash
 $ npm start
-$ npm stop
 ```
 
-### npm scripts
+### Deploy assets to CDN
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
+TODO
 
-
-[egg]: https://eggjs.org
+[Egg.js]: https://eggjs.org
+[Ant Design Pro](https://github.com/ant-design/ant-design-pro)
