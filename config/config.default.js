@@ -9,7 +9,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1513765449219_5858';
 
   config.view = {
-    root: path.join(appInfo.baseDir, 'app/assets/src'),
+    root: path.join(appInfo.baseDir, 'app/assets'),
     mapping: {
       '.js': 'assets',
     },
