@@ -43,4 +43,5 @@ To become a contributor, please follow our [contributing guide](CONTRIBUTING.md)
 [MIT](LICENSE)
 
 [Egg.js]: https://eggjs.org
-[Ant Design Pro](https://github.com/ant-design/ant-design-pro)
+[Ant Design Pro]: https://github.com/ant-design/ant-design-pro
+[egg-view-assets]: https://github.com/eggjs/egg-view-assets
