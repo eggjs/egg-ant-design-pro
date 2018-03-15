@@ -16,10 +16,8 @@ module.exports = appInfo => {
   };
 
   config.assets = {
-    url: 'http://127.0.0.1:7001',
-    urlPrefix: '/public',
+    publicPath: '/public',
     devServer: {
-      debug: true,
       command: 'roadhog dev',
       port: 8000,
       env: {
@@ -28,6 +26,7 @@ module.exports = appInfo => {
         SOCKET_SERVER: 'http://127.0.0.1:8000',
         PUBLIC_PATH: 'http://127.0.0.1:8000',
       },
+      debug: true,
     },
   };
 

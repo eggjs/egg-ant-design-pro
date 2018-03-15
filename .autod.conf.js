@@ -7,6 +7,8 @@ module.exports = {
   test: [
     'test',
     'benchmark',
+    'script',
+    '.roadhogrc.mock.js',
   ],
   dep: [
     'egg',
@@ -25,6 +27,7 @@ module.exports = {
   exclude: [
     './test/fixtures',
     './dist',
+    '**/*.test.js',
+    '**/*.e2e.js',
   ],
 };
-
