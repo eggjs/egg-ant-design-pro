@@ -10,3 +10,6 @@ run/
 .DS_Store
 *.sw*
 *.un~
+
+app/public
+config/manifest.json
