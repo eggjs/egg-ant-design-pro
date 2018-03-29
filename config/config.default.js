@@ -16,7 +16,7 @@ module.exports = appInfo => {
   };
 
   config.assets = {
-    publicPath: '/public',
+    publicPath: '/public/',
     devServer: {
       command: 'umi dev',
       port: 8000,
@@ -25,7 +25,6 @@ module.exports = appInfo => {
         BROWSER: 'none',
         SOCKET_SERVER: 'http://127.0.0.1:8000',
       },
-      debug: true,
     },
   };
 
