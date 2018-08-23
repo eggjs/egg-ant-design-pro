@@ -12,9 +12,15 @@ class HomeController extends Controller {
     // use roadhog mock api first
     const url = 'http://127.0.0.1:8000' + ctx.path + '?' + ctx.querystring;
 
-    const res = await this.ctx.curl(url, {
+    let params = {
       method: this.ctx.method,
-    });
+      dataType: 'json'
+    }
+    if (this.ctx.method) {
+      params.data = ctx.request.body
+    }
+    const res = await this.ctx.curl(url, params);
+    
     ctx.body = res.data;
     ctx.status = res.status;
   }
