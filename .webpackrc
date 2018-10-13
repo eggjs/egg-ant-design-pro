@@ -1,7 +1,6 @@
 {
   "entry": "app/assets/index.js",
   "extraBabelPlugins": [
-    "transform-decorators-legacy",
     ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
   ],
   "env": {
