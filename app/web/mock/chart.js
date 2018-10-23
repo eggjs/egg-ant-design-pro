@@ -4,19 +4,19 @@ import moment from 'moment';
 const visitData = [];
 const beginDay = new Date().getTime();
 
-const fakeY = [ 7, 5, 4, 2, 4, 7, 5, 6, 5, 9, 6, 3, 1, 5, 3, 6, 5 ];
+const fakeY = [7, 5, 4, 2, 4, 7, 5, 6, 5, 9, 6, 3, 1, 5, 3, 6, 5];
 for (let i = 0; i < fakeY.length; i += 1) {
   visitData.push({
-    x: moment(new Date(beginDay + (1000 * 60 * 60 * 24 * i))).format('YYYY-MM-DD'),
+    x: moment(new Date(beginDay + 1000 * 60 * 60 * 24 * i)).format('YYYY-MM-DD'),
     y: fakeY[i],
   });
 }
 
 const visitData2 = [];
-const fakeY2 = [ 1, 6, 4, 8, 3, 7, 2 ];
+const fakeY2 = [1, 6, 4, 8, 3, 7, 2];
 for (let i = 0; i < fakeY2.length; i += 1) {
   visitData2.push({
-    x: moment(new Date(beginDay + (1000 * 60 * 60 * 24 * i))).format('YYYY-MM-DD'),
+    x: moment(new Date(beginDay + 1000 * 60 * 60 * 24 * i)).format('YYYY-MM-DD'),
     y: fakeY2[i],
   });
 }
@@ -98,15 +98,15 @@ const salesTypeDataOffline = [
     y: 99,
   },
   {
-    x: '个护健康',
+    x: '食用酒水',
     y: 188,
   },
   {
-    x: '服饰箱包',
+    x: '个护健康',
     y: 344,
   },
   {
-    x: '母婴产品',
+    x: '服饰箱包',
     y: 255,
   },
   {
@@ -118,14 +118,14 @@ const salesTypeDataOffline = [
 const offlineData = [];
 for (let i = 0; i < 10; i += 1) {
   offlineData.push({
-    name: `门店${i}`,
+    name: `Stores ${i}`,
     cvr: Math.ceil(Math.random() * 9) / 10,
   });
 }
 const offlineChartData = [];
 for (let i = 0; i < 20; i += 1) {
   offlineChartData.push({
-    x: (new Date().getTime()) + (1000 * 60 * 30 * i),
+    x: new Date().getTime() + 1000 * 60 * 30 * i,
     y1: Math.floor(Math.random() * 100) + 10,
     y2: Math.floor(Math.random() * 100) + 10,
   });
@@ -158,7 +158,6 @@ const radarOriginData = [
   },
 ];
 
-//
 const radarData = [];
 const radarTitleMap = {
   ref: '引用',
@@ -179,7 +178,7 @@ radarOriginData.forEach(item => {
   });
 });
 
-export const getFakeChartData = {
+const getFakeChartData = {
   visitData,
   visitData2,
   salesData,
@@ -193,5 +192,5 @@ export const getFakeChartData = {
 };
 
 export default {
-  getFakeChartData,
+  'GET /api/fake_chart_data': getFakeChartData,
 };
