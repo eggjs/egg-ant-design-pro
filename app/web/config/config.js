@@ -5,6 +5,7 @@ import webpackPlugin from './plugin.config';
 import defaultSettings from '../src/defaultSettings';
 
 export default {
+  runtimePublicPath: true,
   // add for transfer to umi
   plugins: [
     [
@@ -108,6 +109,7 @@ export default {
       },
     ],
     fileName: '../../config/manifest.json',
+    publicPath: '',
   },
 
   chainWebpack: webpackPlugin,
