@@ -15,7 +15,7 @@ describe('test/app/controller/home.test.js', () => {
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, egg')
+      .expect(/<script src="\/umi.js"><\/script>/)
       .expect(200);
   });
 });
