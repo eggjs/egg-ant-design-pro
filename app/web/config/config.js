@@ -107,10 +107,14 @@ export default {
         type: 'image/png',
       },
     ],
+    fileName: '../../config/manifest.json',
   },
 
   chainWebpack: webpackPlugin,
   cssnano: {
     mergeRules: false,
   },
+
+  hash: true,
+  outputPath: '../public',
 };
