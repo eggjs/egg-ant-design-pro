@@ -1,7 +1,7 @@
 logs/
 npm-debug.log
 yarn-error.log
-node_modules/
+node_modules
 package-lock.json
 yarn.lock
 coverage/
@@ -13,3 +13,4 @@ run/
 
 app/public
 config/manifest.json
+app/web/.temp

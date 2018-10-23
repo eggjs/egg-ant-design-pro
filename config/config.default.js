@@ -9,20 +9,21 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1513765449219_5858';
 
   config.view = {
-    root: path.join(appInfo.baseDir, 'app/assets'),
+    root: path.join(appInfo.baseDir, 'app/view'),
     mapping: {
-      '.js': 'assets',
+      '.html': 'nunjucks',
     },
   };
 
   config.assets = {
     publicPath: '/public',
     devServer: {
-      command: 'roadhog dev',
+      command: 'umi dev',
       port: 8000,
       env: {
+        APP_ROOT: path.join(__dirname, '../app/web'),
         BROWSER: 'none',
-        DISABLE_ESLINT: true,
+        ESLINT: 'none',
         SOCKET_SERVER: 'http://127.0.0.1:8000',
         PUBLIC_PATH: 'http://127.0.0.1:8000',
       },
