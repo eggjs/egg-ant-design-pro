@@ -5,7 +5,6 @@ import webpackPlugin from './plugin.config';
 import defaultSettings from '../src/defaultSettings';
 
 export default {
-  runtimePublicPath: true,
   // add for transfer to umi
   plugins: [
     [
@@ -95,28 +94,18 @@ export default {
       return localName;
     },
   },
-  manifest: {
-    name: 'ant-design-pro',
-    background_color: '#FFF',
-    description: 'An out-of-box UI solution for enterprise applications as a React boilerplate.',
-    display: 'standalone',
-    start_url: '/index.html',
-    icons: [
-      {
-        src: '/favicon.png',
-        sizes: '48x48',
-        type: 'image/png',
-      },
-    ],
-    fileName: '../../config/manifest.json',
-    publicPath: '',
-  },
 
   chainWebpack: webpackPlugin,
   cssnano: {
     mergeRules: false,
   },
 
+  // extra configuration for egg
+  runtimePublicPath: true,
   hash: true,
   outputPath: '../public',
+  manifest: {
+    fileName: '../../config/manifest.json',
+    publicPath: '',
+  },
 };
