@@ -15,8 +15,9 @@ class HomeController extends Controller {
     let params = {
       method: this.ctx.method,
       dataType: 'json'
-    }
-    if (this.ctx.method) {
+    };
+    let method = params.method.toLowerCase();
+    if (method === 'put' || method === 'post') {
       params.data = ctx.request.body
     }
     const res = await this.ctx.curl(url, params);
