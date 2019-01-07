@@ -10,7 +10,7 @@ class HomeController extends Controller {
   async proxy() {
     const ctx = this.ctx;
     // use roadhog mock api first
-    const url = 'http://127.0.0.1:8000' + ctx.path + '?' + ctx.querystring;
+    const url = this.app.config.assets.url + ctx.path + '?' + ctx.querystring;
 
     const res = await this.ctx.curl(url, {
       method: this.ctx.method,
