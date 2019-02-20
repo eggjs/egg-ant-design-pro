@@ -48,6 +48,7 @@
     "egg-bin": "^4.3.7",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.15.0",
+    "enzyme": "^3.9.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-egg": "^7.0.0",
