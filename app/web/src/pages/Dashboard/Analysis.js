@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import { formatMessage, FormattedMessage } from 'umi/locale';
+import numeral from 'numeral';
 import {
   Row,
   Col,
@@ -14,6 +15,7 @@ import {
   Menu,
   Dropdown,
 } from 'antd';
+import NumberInfo from '@/components/NumberInfo';
 import {
   ChartCard,
   MiniArea,
@@ -25,8 +27,6 @@ import {
   TimelineChart,
 } from '@/components/Charts';
 import Trend from '@/components/Trend';
-import NumberInfo from '@/components/NumberInfo';
-import numeral from 'numeral';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import Yuan from '@/utils/Yuan';
 import { getTimeDistance } from '@/utils/utils';

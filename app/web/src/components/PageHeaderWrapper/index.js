@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormattedMessage } from 'umi/locale';
 import Link from 'umi/link';
-import PageHeader from '@/components/PageHeader';
 import { connect } from 'dva';
+import PageHeader from '@/components/PageHeader';
 import GridContent from './GridContent';
 import styles from './index.less';
 import MenuContext from '@/layouts/MenuContext';
