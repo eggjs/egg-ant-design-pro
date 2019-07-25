@@ -12,9 +12,16 @@ class HomeController extends Controller {
     // use roadhog mock api first
     const url = this.app.config.assets.url + ctx.path + '?' + ctx.querystring;
 
-    const res = await this.ctx.curl(url, {
+    let params = {
       method: this.ctx.method,
-    });
+      dataType: 'json'
+    };
+    let method = params.method.toLowerCase();
+    if (method === 'put' || method === 'post') {
+      params.data = ctx.request.body
+    }
+    const res = await this.ctx.curl(url, params);
+    
     ctx.body = res.data;
     ctx.status = res.status;
   }
